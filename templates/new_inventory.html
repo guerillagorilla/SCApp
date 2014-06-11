@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+          		    <li><a href="/">Home</a></li>
+	  			    <li><a href="/inventory/">Inventory</a></li>
+	  			    <li class="active">New Product</li>
+        		</ol>
+                <hr>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    <div class="container">
+        <table class="table table-hover">
+            {% from "_form_helpers.html" import render_field %}
+      	        <form class="form-newproduct" method=post action="/inventory/new/">
+		            <tr>
+	  		            <td>{{ render_field(form.manufacturer) }}</td>
+	  		            <td>{{ render_field(form.model) }}</td>
+                        <td>{{ render_field(form.serialnum) }}</td>
+                        <td>{{ render_field(form.location) }}</td>
+
+	  		            <td><button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button></td>
+		            </tr>
+		        </form>
+	    </table>
+    </div>
+</div>
+{% endblock %}

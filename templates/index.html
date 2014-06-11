@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li class="active">Home</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-1 col-md-offset-3">
+                <a href="/inventory/" class="thumbnail center">
+                    <center>
+                        <!-- <embed src="static/img/products.svg" type="image/svg+xml" /> -->
+                        <img src="/static/img/products.svg" width=100/>
+                        <div class="caption">
+                            <h4>Inventory</h4>
+                        </div>
+                    </center>
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a href="/attenuator/" class="thumbnail center">
+                    <center>
+                        <!-- <embed src="static/img/dropoff.svg" type="image/svg+xml" /> -->
+                        <img src="/static/img/dropoff.svg" width=100/>
+                        <div class="caption">
+                            <h4>JFW Attenuator Control</h4>
+                        </div>
+                    </center>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

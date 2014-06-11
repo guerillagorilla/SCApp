@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+		<ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+	  	  <li><a href="/clients/">Clients</a></li>
+	  	  <li class="active">Client List</li>
+        </ol>
+		<h1> Client List <small>Food Pantry Management System</small></h1>
+      </div>
+    </div>
+    <br>
+  </div><!-- /.container -->
+    <div class="container">
+      <h2>Search By:</h2>
+      <form class="form-inline" role="form" action="/clients/list/" method="post">
+		<label for="lastname">Last Name</label>
+		<input type="string" placeholder="(ex: Smith)" id="lastname" name="lastname">
+		<br>or<br>
+		<label for="phonenum">Telephone</label>
+		<input type="string" placeholder="(ex: 555-5555)" id="phonenum" name="phonenum">
+		<br>
+		<button type="submit" class="btn btn-success">Search</button>
+		<a href="/clients/list/" class="btn btn-primary"> Show All</a>
+      </form>
+      {% if clients %}
+      <table class="table table-hover">
+	<tr>
+	  <th>Last Name</th>
+	  <th>First Name</th>
+	  <th>Size</th>
+	  <th>Address</th>
+	  <th>Telephone</th>
+	  <th>Start Date</th>
+	</tr>
+        {% for client in clients %}
+	<tr>
+	  <td> {{ client['lastname'] }} </td>
+	  <td> {{ client['firstname'] }} </td>
+	  <td> {{ client['family_size'] }} </td>
+	  <td> {{ client['street'] }} {{ client['city']}} {{ client['state']}} {{ client['zip'] }} </td>
+	  <td> {{ client['phone'] }} </td>
+	  <td> {{ client['start_date'] }} </td>
+	</tr>
+	{% endfor %}
+	</table>
+      {% else %}
+      No Clients Found.
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+

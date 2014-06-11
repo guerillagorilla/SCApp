@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+		    <li class="active">JFW Attenuator Control</li>
+                </ol>
+                <hr>
+            </div>
+        </div>
+    </div><!-- /.container -->
+    <div class="container">
+
+      <table class="table table-condensed table-hover">
+        <thead>
+          <tr>
+            <th><center>Attenuator</center></th>
+              <th><center>Port Name</center></th>
+              <th><center>Value</center></th>
+              <th><center>dB</center></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            
+          <tr>
+            <td>1</td>
+            <form action="/Atten1" method="post">
+              <td>TBD</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens1}} oninput="this.form.amountInput1.value=this.value" /></td>
+              <td><input type="number" name="amountInput1" min="0" max="127" value={{attens1}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>2</td>
+            <form action="/Atten2" method="post">
+              <td>TBD</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens2}} oninput="this.form.amountInput2.value=this.value" /></td>
+              <td><input type="number" name="amountInput2" min="0" max="127" value={{attens2}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>3</td>
+            <form action="/Atten3" method="post">
+              <td>Airspan Pico 2 TX0</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens3}} oninput="this.form.amountInput3.value=this.value" /></td>
+              <td><input type="number" name="amountInput3" min="0" max="127" value={{attens3}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>4</td>
+            <form action="/Atten4" method="post">
+              <td>Airspan Pico2 TX1</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens4}} oninput="this.form.amountInput4.value=this.value" /></td>
+              <td><input type="number" name="amountInput4" min="0" max="127" value={{attens4}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>5</td>
+            <form action="/Atten5" method="post">
+              <td>Airspan PCI 400 TX0</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens5}} oninput="this.form.amountInput5.value=this.value" /></td>
+              <td><input type="number" name="amountInput5" min="0" max="127" value={{attens5}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>6</td>
+            <form action="/Atten6" method="post">
+              <td>Airspan PCI 400 TX1</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens6}} oninput="this.form.amountInput6.value=this.value" /></td>
+              <td><input type="number" name="amountInput6" min="0" max="127" value={{attens6}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>7</td>
+            <form action="/Atten7" method="post">
+              <td>STA 1x Macro Feed (Bench 1)</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens7}} oninput="this.form.amountInput7.value=this.value" /></td>
+              <td><input type="number" name="amountInput7" min="0" max="127" value={{attens7}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>8</td>
+            <form action="/Atten8" method="post">
+              <td>STA DO Macro Feed (Bench 1)</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens8}} oninput="this.form.amountInput8.value=this.value" /></td>
+              <td><input type="number" name="amountInput8" min="0" max="127" value={{attens8}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>9</td>
+            <form action="/Atten9" method="post">
+              <td>ALU 1x Macro Feed (Bench 8)</td>              
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens9}} oninput="this.form.amountInput9.value=this.value" /></td>
+              <td><input type="number" name="amountInput9" min="0" max="127" value={{attens9}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>10</td>
+            <form action="/Atten10" method="post">
+              <td>ALU DO Macro Feed (Bench 8)</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens10}} oninput="this.form.amountInput10.value=this.value" /></td>
+              <td><input type="number" name="amountInput10" min="0" max="127" value={{attens10}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>11</td>
+            <form action="/Atten11" method="post">
+              <td>ALU 1x Macro Feed (Bench 5)</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens11}} oninput="this.form.amountInput11.value=this.value" /></td>
+              <td><input type="number" name="amountInput11" min="0" max="127" value={{attens11}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>12</td>
+            <form action="/Atten12" method="post">
+              <td>ALU DO Macro Feed (Bench 5)</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens12}} oninput="this.form.amountInput12.value=this.value" /></td>
+              <td><input type="number" name="amountInput12" min="0" max="127" value={{attens12}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>13</td>
+            <form action="/Atten13" method="post">
+              <td>TBD</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens13}} oninput="this.form.amountInput13.value=this.value" /></td>
+              <td><input type="number" name="amountInput13" min="0" max="127" value={{attens13}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>14</td>
+            <form action="/Atten14" method="post">
+              <td>TBD</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens14}} oninput="this.form.amountInput14.value=this.value" /></td>
+              <td><input type="number" name="amountInput14" min="0" max="127" value={{attens14}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>15</td>
+            <form action="/Atten15" method="post">
+              <td>TBD</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens15}} oninput="this.form.amountInput15.value=this.value" /></td>
+              <td><input type="number" name="amountInput15" min="0" max="127" value={{attens15}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+          <tr>
+            <td>16</td>
+            <form action="/Atten16" method="post">
+              <td>TBD</td>
+              <td><input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens16}} oninput="this.form.amountInput16.value=this.value" /></td>
+              <td><input type="number" name="amountInput16" min="0" max="127" value={{attens16}} oninput="this.form.amountRange.value=this.value"/>
+              <button type="btn" class="btn btn-sm"><span class="glyphicon glyphicon-refresh"></span> Submit </button></td>
+            </form>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+</div>
+{% endblock %}
