@@ -1,12 +1,8 @@
-### CS 4400 Final Project - Food Pantry Inventory System
-This repository contains the code for Chris Gordon, Melaena Roberts, and Sean Gillespie's final
-project for CS 4400 at Georgia Tech. This webapp is powered by Flask.
-
 ### Running this webapp
 To run this webapp,
 ```
-git clone https://github.com/swgillespie/food-pantry-inventory.git
-cd food-pantry-inventory
+git clone https://github.com/GuerillaGorilla/SCApp.git
+cd SCApp
 pip install -r requirements.txt
 ```
 This application expects an environment variable called FLASK_SECRET_KEY that is used to sign sessions.
@@ -24,4 +20,4 @@ Once everything is set up,
 ```
 python run.py
 ```
-will start a webserver on port 5000.
+will start a webserver on port xxxx.
